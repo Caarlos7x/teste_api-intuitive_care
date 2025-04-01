@@ -1,51 +1,54 @@
-# API de Busca de Operadoras ANS
+# Desafio Técnico - Intuitive Care (API + Frontend)
 
-Esta API desenvolvida em Python com Flask realiza buscas textuais em um CSV de operadoras da ANS, retornando resultados relevantes por nome fantasia ou razão social.
+Este repositório contém a implementação da segunda etapa do desafio técnico da Intuitive Care, onde foi solicitado o desenvolvimento de uma API e uma interface web que permitissem a busca por operadoras ativas da ANS.
 
-## 🚀 Como usar
+## 📦 Estrutura do Projeto
 
-1. Instale as dependências:
-```bash
-pip install -r requirements.txt
+```
+.
+├── api_operadoras/        # Backend Flask
+│   ├── app.py             # Servidor com rota /operadoras
+│   └── requirements.txt   # Dependências da API
+├── frontend_vue/          # Frontend Vue 3 (Vite)
+│   └── App.vue            # Componente com input e listagem
+├── Projeto_API_Operadoras_ANS.docx  # Documento técnico explicativo
+├── README.md              # Este arquivo
 ```
 
-2. Execute o servidor:
+## 🚀 Como executar
+
+### Backend (Flask)
 ```bash
+cd api_operadoras
+pip install -r requirements.txt
 python app.py
 ```
+> A API estará disponível em: http://localhost:5000/operadoras?q=termo
 
-3. Faça uma requisição GET para:
+### Frontend (Vue 3 + Vite)
+```bash
+cd frontend_vue
+npm install
+npm run dev
 ```
-http://localhost:5000/operadoras?q=amil
-```
-
-## 📄 Estrutura esperada do CSV
-
-- registro_ans
-- cnpj
-- razao_social
-- nome_fantasia
-- ...
+> O frontend será iniciado em: http://localhost:5173
 
 ## 🧠 Funcionalidades
 
-- Busca textual por `nome_fantasia` ou `razao_social`
-- Retorno dos 10 primeiros resultados
-- Tratamento de valores ausentes (`NaN` → `null`)
-- Compatível com frontend Vue.js
+- 🔍 Busca textual por nome fantasia ou razão social da operadora
+- ✅ Retorna até 10 resultados relevantes
+- 🛡️ Trata dados ausentes (`NaN` → `null`) para evitar erros no frontend
+- 🔄 Respostas em tempo real conforme o usuário digita
 
-## 🗂 Estrutura do Projeto
+## 📄 Dados utilizados
 
-```
-api_vue_ans/
-├── api_operadoras/
-│   ├── app.py
-│   └── requirements.txt
-└── frontend_vue/
-    └── App.vue
-```
+Utiliza o arquivo CSV de operadoras ativas da ANS (item 3.2 do teste). O arquivo deve estar nomeado como `operadoras.csv` e posicionado na pasta `api_operadoras`.
 
 ## ✍️ Autor
 
-Carlos Augusto  
-Portfólio: https://devside.com.br
+Desenvolvido por **Carlos Augusto**  
+Portfólio: [https://devside.com.br](https://devside.com.br)
+
+---
+
+✅ Projeto testado e funcionando.
