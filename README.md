@@ -14,7 +14,8 @@ Este repositório contém a implementação da segunda etapa do desafio técnico
 ├── api_operadoras/          # Backend com Flask
 │   ├── app.py               # Servidor e lógica de busca
 │   ├── requirements.txt     # Dependências do backend
-│   └── tests/               # Testes automatizados com pytest
+│   ├── tests/               # Testes automatizados com pytest
+│   └── postman/             # Collection Postman para validação manual
 ├── frontend_vue/            # Frontend Vue 3 (Vite)
 │   └── App.vue              # Componente principal
 ├── Projeto_API_Operadoras_ANS.docx  # Documento explicativo
@@ -67,6 +68,20 @@ npm run dev
 
 ---
 
+## 📬 Testes com Postman
+
+Uma collection Postman com exemplos de uso da API está disponível em:
+
+📁 `api_operadoras/postman/Operadoras_ANS_IntuitiveCare.postman_collection.json`
+
+Inclui requisições para:
+
+- ✅ Busca válida (`/operadoras?q=amil`)
+- ⚠️ Busca sem parâmetro (`/operadoras`)
+- ❌ Busca sem resultados (`/operadoras?q=naoencontrada123`)
+
+---
+
 ## 📄 Dados utilizados
 
 - Origem: ANS - Agência Nacional de Saúde Suplementar
@@ -89,4 +104,4 @@ Desenvolvido por **Carlos Augusto**
 
 ---
 
-✅ Projeto testado, versionado e pronto para produção.
+✅ Projeto testado, versionado, documentado e pronto para produção.

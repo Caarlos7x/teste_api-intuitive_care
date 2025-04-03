@@ -1,0 +1,79 @@
+{
+  "info": {
+    "_postman_id": "00000000-0000-0000-0000-000000000000",
+    "name": "Operadoras ANS - Intuitive Care",
+    "description": "Testes da API desenvolvida em Flask para consulta de operadoras ANS.",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Buscar operadora existente",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:5000/operadoras?q=amil",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "operadoras"
+          ],
+          "query": [
+            {
+              "key": "q",
+              "value": "amil"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Busca sem par\u00e2metro",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:5000/operadoras",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "operadoras"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Buscar operadora inexistente",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:5000/operadoras?q=naoencontrada123",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "operadoras"
+          ],
+          "query": [
+            {
+              "key": "q",
+              "value": "naoencontrada123"
+            }
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}
