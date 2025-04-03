@@ -51,4 +51,4 @@ Portfólio: [https://devside.com.br](https://devside.com.br)
 
 ---
 
-✅ Projeto testado e funcionando.
+✅ Projeto testado e funcionando !
